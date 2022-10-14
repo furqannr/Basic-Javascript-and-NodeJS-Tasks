@@ -23,3 +23,16 @@ for (let index = 0; index < guestsList.length; index++) {
 for (let index = 0; index < guestsList.length; index++) {
     console.log("Hi Mr."+guestsList[index]+", I would like you to invite you to dinner tomorrow.");
 }
+console.log("We found a bigger table for dinner so now we can invite three more people.");
+guestsList.unshift("Furqan");//Furqan added at zero index
+guestsList.push("maaz");//Maaz added at last index
+//Adding Ali at center
+let temp="Ali";
+for (let index = guestsList.length; index >=(guestsList.length/2); index--) {
+    guestsList[index]=guestsList[index-1];
+    guestsList[index-1]=temp;
+}
+console.log("New Guest list: 6 Members");
+for (let index = 0; index < guestsList.length; index++) {
+    console.log("Hi Mr."+guestsList[index]+", I would like you to invite you to dinner tomorrow.");
+}
